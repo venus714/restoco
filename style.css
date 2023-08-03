@@ -89,6 +89,9 @@ header {
 .home-text span {
   color: var(--main-color);
 }
+.aboutUs_container span{
+  color: var(--main-color);
+}
 .home-text p {
   max-width: 80%;
   margin: 1rem 0 1.1rem;
