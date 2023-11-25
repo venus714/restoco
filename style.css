@@ -61,6 +61,7 @@ header {
   font-size: 2rem;
   cursor: pointer;
   display: none;
+  background-color:rgb(241, 234, 234);
 }
 .home {
   width: 100%;
@@ -249,6 +250,7 @@ textarea {
   }
   .navbar.active {
     top: 100%;
+    background-color: #2f2f2f;
   }
   .navbar a {
     padding: 1.5rem;
