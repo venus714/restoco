@@ -72,9 +72,9 @@ header {
   background: #fff4f3;
   gap: 1.5rem;
 }
-.home-img img {
+/* .home-img img {
   width:150%;
-}
+} */
 .home-text h3 {
   color: var(--main-color);
   font-size: 1rem;
@@ -86,6 +86,9 @@ header {
 }
 .home-text h1 {
   font-size: var(--big-font);
+}
+.rest{
+  color: #f4f4f4;
 }
 .home-text span {
   color: var(--main-color);
