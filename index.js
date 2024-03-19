@@ -395,6 +395,7 @@ $(document).ready(function() {
   // Hide the additional images by default
   $(".more-images-").hide();
 });
+
 document.getElementById("whatsappForm").addEventListener("submit", function (e) {
   e.preventDefault(); // Prevent the default form submission
   
