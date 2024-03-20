@@ -25,40 +25,11 @@ body {
   color: var(--text-color);
   background: var(--bg-color);
 }
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #1a1b1b;
-  padding: 18px 10%;
-  margin-bottom: 3rem;
-}
-.logo-image {
+
+.navbar img {
   width: 100px;
   height: 100px;
-  object-fit: contain; /* Adjust the width to your desired size */
-}
-
-.navbar {
-  display: flex;
-  
-}
-.navbar a {
-  font-size: 1rem;
-  padding: 10px 20px;
-  
-  color: var(--bg-color);
-  font-weight: 500;
-}
-.navbar a:hover {
-  background: var(--main-color);
-  color: #fff;
-  border-radius: 1rem;
+  object-fit: contain; /
 }
 #menu-icon {
   font-size: 2rem;
@@ -74,10 +45,10 @@ header {
   align-items: center;
   background: #ffffff;
   gap: 1.5rem;
+ 
+  animation: slideInFromLeft 1s ease-out;
 }
-/* .home-img img {
-  width:150%;
-} */
+
 .home-text h3 {
   color: var(--main-color);
   font-size: 1rem;
@@ -99,14 +70,58 @@ header {
 }
 .aboutUs_container span{
   color: var(--main-color);
+  .aboutUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.aboutUs_container {
+    width: 80%;
+}
+
+.aboutUs_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutUs_card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.aboutUs_card .image {
+    flex: 1;
+    margin-right: 20px; /* Adjust spacing between image and text */
+}
+
+.aboutUs_card .image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.aboutUs_card .text {
+    flex: 2;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .aboutUs_content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .aboutUs_card .image {
+        margin-right: 0;
+        margin-bottom: 20px; /* Adjust spacing between image and text */
+    }
+}
+
   
-
 }
-.aboutUs_container p {
-  margin-bottom: 20px;
-  background-color: #007BFF;
-}
-
 .home-text p {
   max-width: 80%;
   margin: 1rem 0 1.1rem;
@@ -140,7 +155,9 @@ header {
   height: auto;
   padding: 20px 20px;
   margin-bottom: 1rem;
+  
 }
+
 .box {
   display: flex;
   flex-direction: column;
@@ -265,7 +282,7 @@ textarea {
     color: var(--text-color);
   }
   
-  header .navbar {
+  /* header .navbar {
     position: absolute;
     top: -400px;
     left: 0;
@@ -276,8 +293,8 @@ textarea {
     background: #fff4f3;
     box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
     transition: 0.5s;
-  }
-  .navbar.active {
+  } */
+  /* .navbar.active {
     top: 100%;
     background-color: #2f2f2f;
   }
@@ -288,7 +305,7 @@ textarea {
   .navbar a:hover {
     color: var(--main-color);
     background: none;
-  }
+  } */
   .home {
     grid-template-columns: 1fr;
   }
@@ -434,4 +451,102 @@ textarea {
 
 .Testimonials .box p {
   margin: 1rem;
+}
+/* Navbar Brand */
+.container-fluid {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1a1b1b;
+  padding: 18px 10%;
+  margin-bottom: 1%;
+}
+.nav-item{
+  color: #f4f4f4;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  color: #fdfcfc; /* Text color */
+  font-size: 18px; /* Adjust font size */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #233d19; /* Text color on hover */
+}
+.navbar-nav .nav-link.active {
+  color: white;
+}
+.navbar-nav .nav-link.active:hover {
+  color: rgb(44, 145, 31);
+}
+.navbar-nav .nav-link a{
+  color: #d8d3d3;
+
+}
+
+/* Navbar Toggler Button */
+.navbar-toggler {
+  border: none; /* Remove border */
+  background-color:#d8d3d3; /* Set background color */
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  color: #d8d3d3; /* Icon color */
+  font-size: 24px; /* Adjust icon size */
+}
+
+/* Change color of toggler icon on hover */
+.navbar-toggler:hover .navbar-toggler-icon {
+  color: #ccc;
+}
+.navbar-toggler-icon{
+  color: #ccc;
+}
+/* Define CSS animation for elements *
+
+/* Add 'active' class to trigger animation */
+.animate-up.active,
+.animate-left.active,
+.animate-right.active {
+  opacity: 1;
+  transform: translateY(0) translateX(0); /* Reset transform */
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.home {
+  animation: slideInFromLeft 1.8s ease-out;
+}
+.aboutUs_card{
+  animation: fadeIn 1s ease-out;
+}
+.aboutUs_container {
+  animation: fadeIn 5s ease-out;
+}
+.services-container{
+  animation: slideInFromLeft 1.8s ease-out;
 }
