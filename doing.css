@@ -1,3 +1,17 @@
+
+.boxx{
+    animation: slideInFromLeft 1.8s ease-out;
+  }
+
+.aboutUs_card{
+  animation: fadeIn 1s ease-out;
+}
+.aboutUs_container {
+  animation: fadeIn 5s ease-out;
+}
+.services-container{
+  animation: slideInFromLeft 1.8s ease-out;
+}
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
@@ -123,8 +137,8 @@ body {
   
 }
 .home-text p {
+  max-width: 80%;
   margin: 1rem 0 1.1rem;
-  font-size: 1em;
 }
 .btn {
   background: var(--main-color);
@@ -164,18 +178,13 @@ body {
   align-items: center;
   text-align: center;
   border-radius: 20px; /* Adjust as needed */
-  box-shadow: 10px 10px 20px rgba(170, 230, 51, 0.25); /* Adjust shadow as needed */
+  box-shadow: 10px 10px 20px rgba(22, 32, 2, 0.25); /* Adjust shadow as needed */
   flex-wrap: wrap; /* Change 'var()' to an actual value */
   justify-content: center; /* Change 'var()' to an actual value */
   align-items: center; /* Change 'var()' to an actual value */
   align-content: center; /* Change 'var()' to an actual value */
   gap: 10px; /* Adjust gap as needed */
   margin-bottom: 3rem;
-  
-}
-.stars {
-  display: inline-flex; /* Set display to inline-flex to align stars horizontally */
-  margin-right: 5px; 
 }
 
 
@@ -183,13 +192,12 @@ body {
   width: 100px;
   height: 100px;
   object-fit: contain;
-  
 }
 
 
 .box h2 {
-  font-size: 1rem;
- 
+  font-size: 1.2rem;
+  margin: 1.7rem 0 1rem;
 }
 .boxx {
   display: flex;
@@ -204,6 +212,7 @@ body {
   align-content: center; /* Change 'var()' to an actual value */
   gap: 10px; /* Adjust gap as needed */
   margin-bottom: 3rem;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
 
@@ -216,7 +225,8 @@ body {
 
 .box li {
   font-size: 1.2rem;
-  }
+  margin: 1.7rem 0 1rem;
+}
 .chefs .chefs-container {
   display: flex;
   flex-wrap: wrap;
@@ -234,18 +244,48 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
+.chefs .chefs-container .chef-box .text {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  padding-top: 8rem;
+  background: rgba(255, 244, 243, 0.78);
+  transition: 0.5s;
+}
+.chefs .chefs-container .chef-box:hover .text {
+  top: 0;
+}
+.chef-box .text h2 {
+  font-size: 1.2rem;
+}
+.chef-box .text p {
+  margin: 0.4rem 0 1rem;
+}
 .contact{
-  display: flex;
-  justify-content: center;
-  color:var(--bg-color)
-}
-.contact {
-  display: flex;
-  background-color: #1a1b1b;
-}
-
-
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    color:var(--bg-color)
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1b1b;
+  }
+  .contact-form form input,
+  textarea {
+    width: 400px;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    background: #fff4f3;
+  }
 /* Making Responsive */
 @media (max-width: 991px) {
   header {
@@ -268,17 +308,14 @@ body {
     display: initial;
     color: var(--text-color);
   }
+  
+  .home {
+    grid-template-columns: 1fr;
+  }
+  .home-text {
+    padding-top: 2rem;
+  }
 }
-.home-text {
-  font-size: 1.2em; /* Adjust font size as needed */
-  word-spacing: 0.2em; /* Adjust space between words as needed */
-}
-
-.home-text h1 {
-  font-size: 2em; /* Adjust heading font size as needed */
-}
-
-
 @media (max-width: 415px) {
   .contact-form form input,
   textarea {
@@ -306,6 +343,79 @@ body {
   font-weight: bold;
 }
 
+
+.whatsapp-container {
+  text-align: center;
+}
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.whatsapp-button p {
+  margin-right: 10px;
+}
+
+.whatsapp-button i {
+  font-size: 24px;
+}
+#formContainer {
+  display: none;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #888;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Style the form header */
+#formContainer h2 {
+  text-align: center;
+  color: #007BFF;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Apply styles to form elements */
+#whatsappForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#whatsappForm input[type="text"],
+#whatsappForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#whatsappForm textarea {
+  height: 100px;
+}
+
+/* Style the submit button */
+#whatsappForm input[type="submit"] {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
 .Testimonials {
   display: flex;
   flex-wrap: wrap;
@@ -423,17 +533,6 @@ body {
   }
 }
 
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -442,12 +541,12 @@ body {
     opacity: 1;
   }
 }
-
 .home {
   animation: slideInFromLeft 1.8s ease-out;
 }
 .aboutUs_card{
   animation: fadeIn 1s ease-out;
+  margin-top: 8rem;
 }
 .aboutUs_container {
   animation: fadeIn 5s ease-out;
@@ -457,112 +556,4 @@ body {
 }
 .boxx{
   animation: slideInFromLeft 1.8s ease-out;
-}
-
-.contact .lowbar img {
-  width: 100px; /* Adjust the width as needed */
-  height: 100px; 
-  margin-top: 0.1rem;/* Maintain aspect ratio */ /* Add spacing between the image and text */
-
-}
-
-.contact .heading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 400px; /* Adjust width of each testimonial box */
-  border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(22, 32, 2, 0.25);
-  margin-bottom: 1rem;
-
-}
-
-
-.contact .heading p {
-  margin-top: 1.5rem
-}
-.contact .phone {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 400px; /* Adjust width of each testimonial box */
-  border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(22, 32, 2, 0.25);
-  margin-bottom: 1rem;
-  margin-top: 1.3rem
-}
-
-.contact .phone h2{
-  color: #036936;
-
-}
-.Why_Us {
-  padding: 50px 0;
-  background-color: #f8f9fa;
-}
-
-.why-us-content {
-  text-align: center;
-}
-
-.why-us-content h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.reasons {
-  display: flex;
-  justify-content: space-around; /* Adjust spacing between reason divs */
-  flex-wrap: wrap; /* Allow reasons to wrap to the next line */
-}
-
-.reason {
-  width: 300px; /* Set width of individual reason divs */
-  margin: 20px; /* Add margin around each reason div */
-  padding: 20px; /* Add padding inside each reason div */
-  background-color: #fff; /* Set background color for each reason div */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Add border radius for rounded corners */
-  position: relative; /* Position for pseudo-element */
-  animation: slideInFromRight 1.8s ease-out;
-}
-
-.reason::before {
-  content: "";
-  position: absolute;
-  top: -10px; /* Adjust top position */
-  left: -10px; /* Adjust left position */
-  width: calc(100% + 20px); /* Adjust width to cover entire div with border */
-  height: calc(100% + 20px); /* Adjust height to cover entire div with border */
-  background-color: #ccc; /* Set background color for the border */
-  border: 1px solid #ccc; /* Add border around the rectangle */
-  border-radius: 5px; /* Add border radius for rounded corners */
-  z-index: -1; /* Send the pseudo-element behind the reason div */
-
-}
-
-.reason {
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green shadow */
-}
-
-
-.reason h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.reason p {
-  font-size: 16px;
-  color: #666;
-}
-
-.founder{
-  animation: slideInFromRight 1.8s ease-out;
-}
-.copyright {
-  text-align: center;
 }
