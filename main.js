@@ -28,4 +28,14 @@ document.getElementById("whatsappForm").addEventListener("submit", function (e) 
     window.open(whatsappURL, "_blank");
   });
   // Initialize the navbar toggle
- 
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector(".navbar-toggler").addEventListener("click", function() {
+        var collapsedLinks = document.getElementById("navbarSupportedContent");
+        if (collapsedLinks.classList.contains("show")) {
+            collapsedLinks.classList.remove("show");
+        } else {
+            collapsedLinks.classList.add("show");
+        }
+    });
+});

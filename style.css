@@ -311,24 +311,26 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px; /* Adjust gap between testimonials */
-}
-.Testimonials h1{
   text-align: center;
-  padding: 20px 400px;
 }
-.Testimonials Pp{
-  text-align: center;
-  padding: 10px 200px;}
+
+.Testimonials h1 {
+  padding: 20px; /* Apply padding */
+  margin-bottom: 20px;
+  display: block; /* Set to display as block-level elements */
+  width: 100%; /* Ensure full width */
+}
 
 .Testimonials .box {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 400px; /* Adjust width of each testimonial box */
+  width: 450px; /* Adjust width of each testimonial box */
   border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(22, 32, 2, 0.25);
-  margin-bottom: 1rem;
+  box-shadow: 10px 10px 20px rgba(156, 224, 18, 0.25);
+  margin-bottom: 20px; /* Adjust margin bottom */
+  margin-top: 3rem;
 }
 
 .Testimonials .box img {
@@ -560,9 +562,21 @@ body {
   color: #666;
 }
 
-.founder{
+.blog{
   animation: slideInFromRight 1.8s ease-out;
+  padding: 700px 500px;
+  background-color: #e9ca63; /* Set background color for the border */
+  border: 1px solid #ccc; /* Add border around the rectangle */
+  border-radius: 5px;
+  
 }
 .copyright {
   text-align: center;
+  background-color: #1a1b1b;
+  
+}
+
+.copyright p{
+  color: #f8f9fa
+  ;
 }

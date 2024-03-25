@@ -414,3 +414,33 @@ document.getElementById("whatsappForm").addEventListener("submit", function (e) 
   window.open(whatsappURL, "_blank");
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector(".navbar-toggler").addEventListener("click", function() {
+      var collapsedLinks = document.getElementById("navbarSupportedContent");
+      if (collapsedLinks.classList.contains("show")) {
+          collapsedLinks.classList.remove("show");
+      } else {
+          collapsedLinks.classList.add("show");
+      }
+  });
+});
+$(document).ready(function () {
+  var $slideshow = $('.slideshow');
+  var $images = $slideshow.find('img');
+  var currentIndex = 0;
+  var totalImages = $images.length;
+
+  function showImage(index) {
+      $images.hide();
+      $images.eq(index).show();
+  }
+
+  function nextImage() {
+      currentIndex = (currentIndex + 1) % totalImages;
+      showImage(currentIndex);
+  }
+
+  // Start slideshow
+  showImage(currentIndex);
+  setInterval(nextImage, 2000); // Change image every 2 seconds
+});
