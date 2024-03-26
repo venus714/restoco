@@ -187,22 +187,13 @@ body {
   margin-bottom: 3rem;
 }
 
-
-.box img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
- 
-}
-
-
 .box h2 {
   font-size: 1.2rem;
   margin: 1.7rem 0 1rem;
 }
 .boxx {
   display: flex;
-  flex-direction: column;
+ 
   align-items: center;
   text-align: center;
   border-radius: 30px; /* Adjust as needed */
@@ -214,37 +205,35 @@ body {
   gap: 10px; /* Adjust gap as needed */
   margin-bottom: 3rem;
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-  margin-top: 4rem;
+  margin-top: 7rem;
 
 }
 
 
 .boxx img {
-  width: 350px;
-  height: 350px;
-  object-fit: contain;
-  }
-  .swiper-slide img{
-    width: 350px;
-    height: 350px;
-    object-fit: contain;
-  }
-  .swiper-wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-radius: 30px; /* Adjust as needed */
-    box-shadow: 10px 10px 20px rgba(22, 32, 2, 0.25); /* Adjust shadow as needed */
-    flex-wrap: wrap; /* Change 'var()' to an actual value */
-    justify-content: center; /* Change 'var()' to an actual value */
-    align-items: center; /* Change 'var()' to an actual value */
-    align-content: center; /* Change 'var()' to an actual value */
-    gap: 10px; /* Adjust gap as needed */
-    margin-bottom: 3rem;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-  }
+  width: 30%; /* Adjust width as needed */
+  border-radius: 10px; /* Add border-radius to images */
+  margin-top: 4rem;
+}
 
+.management-list-item {
+  width: 100%; /* Ensure the list item takes up full width */
+  text-align: center; /* Center text */
+}
+
+
+.boxx img {
+  float: left; /* Float images to the left */
+  width: 30%; /* Adjust width as needed */
+  margin-right: 10px; /* Add some spacing between images */
+}
+
+/* Clear the float to prevent layout issues */
+.boxx::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 .box li {
   font-size: 1.2rem;
@@ -578,4 +567,19 @@ body {
 .management-list-item {
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.see-more-button {
+  border: 2px solid #036936; /* Green border color */
+  background-color: transparent; /* Transparent background */
+  color: #036936; /* Green text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.see-more-button:hover {
+  background-color: #036936; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
 }
