@@ -300,6 +300,7 @@ body {
 }
 .phone {
   text-align: center;
+
 }
 
 .phone p:first-child {
@@ -328,7 +329,7 @@ body {
   text-align: center;
   width: 450px; /* Adjust width of each testimonial box */
   border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(156, 224, 18, 0.25);
+  box-shadow: 10px 10px 20px  rgb(44, 145, 31);
   margin-bottom: 20px; /* Adjust margin bottom */
   margin-top: 3rem;
 }
@@ -373,7 +374,7 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-  color: #233d19; /* Text color on hover */
+  color: rgb(44, 145, 31) /* Text color on hover */
 }
 .navbar-nav .nav-link.active {
   color: white;
@@ -494,6 +495,7 @@ body {
   box-shadow: 10px 10px 20px rgba(22, 32, 2, 0.25);
   margin-bottom: 1rem;
   margin-top: 1.3rem
+  
 }
 
 .contact .phone h2{
@@ -562,14 +564,38 @@ body {
   color: #666;
 }
 
-.blog{
+.Blog {
   animation: slideInFromRight 1.8s ease-out;
-  padding: 700px 500px;
-  background-color: #e9ca63; /* Set background color for the border */
+  padding: 20px;
+  background-color: #e9ca63; /* Set background color for the rectangle */
   border: 1px solid #ccc; /* Add border around the rectangle */
   border-radius: 5px;
-  
+  margin: 20px auto; /* Center the rectangle */
+  max-width: 800px; /* Limit maximum width */
+  background-image: url(./bubl.jpg);
+  margin-left: 10rem;
+ 
 }
+.blogg h1{
+  margin-left: 10rem;
+}
+
+.content {
+  padding: 20px; /* Add padding inside the rectangle */
+  text-align: justify; /* Justify text alignment */
+}
+
+@keyframes slideInFromRight {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
 .copyright {
   text-align: center;
   background-color: #1a1b1b;

@@ -361,30 +361,6 @@ body {
   font-weight: bold;
 }
 
-
-.whatsapp-container {
-  text-align: center;
-}
-
-.whatsapp-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background-color: green;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.whatsapp-button p {
-  margin-right: 10px;
-}
-
-.whatsapp-button i {
-  font-size: 24px;
-}
 #formContainer {
   display: none;
   padding: 20px;
@@ -404,36 +380,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Apply styles to form elements */
-#whatsappForm label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-#whatsappForm input[type="text"],
-#whatsappForm textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#whatsappForm textarea {
-  height: 100px;
-}
-
-/* Style the submit button */
-#whatsappForm input[type="submit"] {
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-weight: bold;
-}
 .Testimonials {
   display: flex;
   flex-wrap: wrap;
@@ -455,7 +401,8 @@ body {
   text-align: center;
   width: 400px; /* Adjust width of each testimonial box */
   border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(22, 32, 2, 0.25);
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green shadow */
+
   margin-bottom: 1rem;
 }
 
@@ -625,3 +572,10 @@ body {
   ;
 }
 
+.see-more-button {
+  margin-bottom: 1rem;
+}
+.management-list-item {
+  text-transform: uppercase;
+  font-weight: bold;
+}
