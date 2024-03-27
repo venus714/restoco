@@ -408,7 +408,7 @@ document.getElementById("whatsappForm").addEventListener("submit", function (e) 
   const message = `Name: ${name}%0APhone Number: ${phoneNumber}%0ADescription: ${description}`;
   
   // Construct the WhatsApp URL
-  const whatsappURL = `https://wa.me/+254791023312?text=hello+how+can+we+help+you`;
+  const whatsappURL = `https://wa.me/0710790674?text=Hi+I+have+an+enquiry`;
   
   // Open WhatsApp in a new tab
   window.open(whatsappURL, "_blank");

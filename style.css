@@ -39,8 +39,6 @@ body {
 }
 .home {
   width: 100%;
-  min-height: 50%;
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   background: #ffffff;
@@ -53,9 +51,6 @@ body {
   color: var(--main-color);
   font-size: 1rem;
   font-weight: 400;
-  padding: 40px;
-  width: 160px;
-  border-radius: 2rem;
   background: #ffffff;
 }
 .home-text h1 {
@@ -123,7 +118,6 @@ body {
   
 }
 .home-text p {
-  margin: 1rem 0 1.1rem;
   font-size: 1em;
 }
 .btn {
@@ -566,18 +560,16 @@ body {
 
 .Blog {
   animation: slideInFromRight 1.8s ease-out;
-  padding: 20px;
   background-color: #e9ca63; /* Set background color for the rectangle */
   border: 1px solid #ccc; /* Add border around the rectangle */
   border-radius: 5px;
   margin: 20px auto; /* Center the rectangle */
   max-width: 800px; /* Limit maximum width */
   background-image: url(./bubl.jpg);
-  margin-left: 10rem;
  
 }
 .blogg h1{
-  margin-left: 10rem;
+  margin-left: 20rem;
 }
 
 .content {
